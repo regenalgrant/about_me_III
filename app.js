@@ -3,7 +3,7 @@
 var errorCount = 0;
 var correctAnswers = 0;
 
-function countErrors(errors) {
+function countErrors(errors){
   if (errors === 1) {
     alert('You are horrible, get in the front leaning rest to enter Y/N or yes/no as an answer - please do so for future questions.');
   }
@@ -18,30 +18,27 @@ function countErrors(errors) {
   }
   if (errors >= 5) {
     alert('Go pound sand.');
- 
   }
-};
+}
 
 
 function correctCount() {
   console.log('The user currently has ', correctAnswers, ' correct answers.');
 }
 
-
 var userName = prompt('Hi there! What\'s your name?');
 
-
-if (userName === null || userName === '') {
-  alert('Well, you need a name, so... We\'re going to call you NAN.');
-  userName = 'NAN';
+function noUserName() {
+  if (userName === null || userName === '') {
+    alert('Well, you need a name, so... We\'re going to call you NAN.');
+    userName = 'NAN';
+  }
 }
 
 
 console.log('Guest\'s name: ', userName);
 
-
 var questionsGame = ['Would you guess that Regenal has served in the Army, ' + userName + '?'];
-
 questionsGame.push('So, ' + userName + ', do you think it\'s true that Regenal\'s done work within the US Special Operations?');
 questionsGame.push('Would you believe Regenal has been in every country ?');
 questionsGame.push('How about a simpler one, ' + userName + '. Would you guess Regenal is over the age of 46?');
@@ -49,7 +46,7 @@ questionsGame.push('Alright, here\'s one without a correct answer. Do you think 
 
 
 var yesAnswers = ['Factually, he has served 15.'];
-yesAnswers.push('Yes – It was the best time in my career.');
+yesAnswers.push('Yes \- It was the best time in my career.');
 yesAnswers.push('You are so bright, yes. It\'s best time in my life.');
 yesAnswers.push('Not quite.');
 yesAnswers.push('Well, ahhhh, ' + userName + ', thank you!');
@@ -57,14 +54,13 @@ yesAnswers.push('Well, ahhhh, ' + userName + ', thank you!');
 
 var noAnswers = ['I beg to differ.'];
 noAnswers.push('Well, I have.');
-noAnswers.push('You can\’t tell, I have.');
+noAnswers.push('You can\'t tell, I have.');
 noAnswers.push('Whoa! Regenal was born in \'1970.');
 noAnswers.push('Awww. I better, ' + userName + '.');
 
 
 var gameAnswers = [];
 var possibleAnswers = ['y', 'yes', 'n', 'no'];
-
 
 function fiveQuestions() {
   for (var i = 0; i < questionsGame.length; i++) {
@@ -99,10 +95,6 @@ function fiveQuestions() {
   }
 }
 
-
-fiveQuestions();
-
-
 function numberGuesser() {
   var userGuess = 0;
   var randomNumber = Math.floor(Math.random() * 20);
@@ -130,10 +122,6 @@ function numberGuesser() {
   }
   correctCount();
 }
-
-
-numberGuesser();
-
 
 function questionsCountries() {
   var visitedCountries = ['greece', 'belgium', 'netherlands', 'london', 'germany', 'luxemburg', 'italy', 'france', 'switzerland', 'austria', 'australia', 'philippines', 'guam', 'korea', 'a lot more'];
@@ -163,9 +151,13 @@ function questionsCountries() {
 
   alert('Here is the list of all the states besides Washington Regenal has visited: ' + visitedCountries.join('\n'));
 }
+
+function gameOver() {
+  alert('Thanks for enjoying my game, ' + userName + '! You got a total of ' + correctAnswers + ' correct answers out of 7.');
+}
+
+noUserName();
+fiveQuestions();
+numberGuesser();
 questionsCountries();
-
-
-alert('Thanks for enjoying my game, ' + userName + '! You got a total of ' + correctAnswers + ' correct answers out of 7.');
-
-
+gameOver();
