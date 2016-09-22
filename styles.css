@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 header {
   text-align: center;
   background: red;
@@ -7,11 +8,24 @@ header {
 }
 
 header h2 {
+=======
+header
+{
+	text-align: center;
+  background: red;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+header h2
+{
+>>>>>>> 8560d8400a9b58b724828057ccd0ae713c1939c8
   text-align: center;
   background: blue;
   color: #fff;
   padding: 10px 10px 10px 10px;
 
+<<<<<<< HEAD
   margin-bottom: 0px;
 }
 
@@ -85,4 +99,22 @@ aside {
 main {
   margin-top: 0px;
   background: #555;
+=======
+  margin-bottom: 10px;
+}
+
+body
+ {
+  background: #666;
+}
+
+a
+{
+  color: #c79ecb;
+}
+
+main li
+{
+  color: #00b233
+>>>>>>> 8560d8400a9b58b724828057ccd0ae713c1939c8
 }
