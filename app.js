@@ -3,7 +3,7 @@
 var errorCount = 0;
 var correctAnswers = 0;
 
-function countErrors(errors) {
+function countErrors(errors){
   if (errors === 1) {
     alert('You are horrible, get in the front leaning rest to enter Y/N or yes/no as an answer - please do so for future questions.');
   }
@@ -20,7 +20,7 @@ function countErrors(errors) {
     alert('Go pound sand.');
     window.location = 'http://lmgtfy.com/?q=how+to+answer+a+yes+or+no+question';
   }
-};
+}
 
 
 function correctCount() {
@@ -30,12 +30,13 @@ function correctCount() {
 
 var userName = prompt('Hi there! What\'s your name?');
 
-
-if (userName === null || userName === '') {
-  alert('Well, you need a name, so... We\'re going to call you NAN.');
-  userName = 'NAN';
+function noUserName() {
+  if (userName === null || userName === '') {
+    alert('Well, you need a name, so... We\'re going to call you NAN.');
+    userName = 'NAN';
+  }
 }
-
+noUserName();
 
 console.log('Guest\'s name: ', userName);
 
@@ -64,7 +65,6 @@ noAnswers.push('Awww. I better, ' + userName + '.');
 
 var gameAnswers = [];
 var possibleAnswers = ['y', 'yes', 'n', 'no'];
-
 
 function fiveQuestions() {
   for (var i = 0; i < questionsGame.length; i++) {
@@ -99,9 +99,7 @@ function fiveQuestions() {
   }
 }
 
-
 fiveQuestions();
-
 
 function numberGuesser() {
   var userGuess = 0;
@@ -131,9 +129,7 @@ function numberGuesser() {
   correctCount();
 }
 
-
 numberGuesser();
-
 
 function questionsCountries() {
   var visitedCountries = ['greece', 'belgium', 'netherlands', 'london', 'germany', 'luxemburg', 'italy', 'france', 'switzerland', 'austria', 'australia', 'philippines', 'guam', 'korea', 'a lot more'];
@@ -167,5 +163,3 @@ questionsCountries();
 
 
 alert('Thanks for enjoying my game, ' + userName + '! You got a total of ' + correctAnswers + ' correct answers out of 7.');
-
-}
