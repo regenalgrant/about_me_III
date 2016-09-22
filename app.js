@@ -18,7 +18,7 @@ function countErrors(errors) {
   }
   if (errors >= 5) {
     alert('Go pound sand.');
-    window.location = 'http://lmgtfy.com/?q=how+to+answer+a+yes+or+no+question';
+ 
   }
 };
 
