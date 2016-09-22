@@ -51,7 +51,7 @@ questionsGame.push('Alright, here\'s one without a correct answer. Do you think 
 var yesAnswers = ['Factually, he has served 15.'];
 yesAnswers.push('Yes – It was the best time in my career.');
 yesAnswers.push('You are so bright, yes. It\'s best time in my life.');
-yesAnswers.push('Not quite. His 30th birthday rolls around Sep. 2.');
+yesAnswers.push('Not quite.');
 yesAnswers.push('Well, ahhhh, ' + userName + ', thank you!');
 
 
