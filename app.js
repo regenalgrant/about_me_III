@@ -168,4 +168,4 @@ questionsCountries();
 
 alert('Thanks for enjoying my game, ' + userName + '! You got a total of ' + correctAnswers + ' correct answers out of 7.');
 
-}
+
