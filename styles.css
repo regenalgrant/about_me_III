@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 header {
   text-align: center;
   background: red;
@@ -8,7 +8,7 @@ header {
 }
 
 header h2 {
-=======
+
 header
 {
 	text-align: center;
@@ -19,13 +19,12 @@ header
 
 header h2
 {
->>>>>>> 8560d8400a9b58b724828057ccd0ae713c1939c8
+
   text-align: center;
   background: blue;
   color: #fff;
   padding: 10px 10px 10px 10px;
 
-<<<<<<< HEAD
   margin-bottom: 0px;
 }
 
@@ -116,5 +115,5 @@ a
 main li
 {
   color: #00b233
->>>>>>> 8560d8400a9b58b724828057ccd0ae713c1939c8
+
 }
